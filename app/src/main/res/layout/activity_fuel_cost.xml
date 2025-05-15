@@ -50,9 +50,9 @@
             android:orientation="horizontal"
             android:layout_marginStart="26dp"
             android:layout_marginEnd="26dp"
-            android:layout_marginBottom="10sp"
+            android:layout_marginBottom="5sp"
             android:textColor="@color/whitecontrast"
-            android:textSize="50sp"
+            android:textSize="42sp"
             android:textStyle="bold"/>
 
         <TextView
@@ -63,8 +63,7 @@
             android:orientation="horizontal"
             android:layout_marginStart="26dp"
             android:layout_marginEnd="26dp"
-
-            android:textSize="24sp"
+            android:textSize="20sp"
             android:textColor="@color/whitecontrast"
             />
 
@@ -89,7 +88,6 @@
             android:layout_marginStart="26dp"
             android:layout_marginEnd="26dp"
             android:layout_marginTop="30dp"
-            android:layout_marginBottom="140dp"
             >
 
             <com.google.android.material.textfield.TextInputEditText
