@@ -2,4 +2,10 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="main">#023047</color>
+    <color name="secondary">#FFB605</color>
+    <color name="whitecontrast">#F8F8FF</color>
+    <color name="subtext">#7485A1</color>
+    <color name="inputfields">#043B59</color>
+
 </resources>
