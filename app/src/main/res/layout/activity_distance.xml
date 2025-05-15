@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main"
+    tools:context=".DistanceActivity">
+
+    <LinearLayout
+        android:id="@+id/vg_Distancetop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/topbar_bg"
+        android:orientation="horizontal"
+        android:padding="120dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottie_consumption"
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="40dp"
+        android:padding="55dp"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="Distance.json"
+        app:lottie_loop="false" />
+
+    <LinearLayout
+        android:id="@+id/vg_distance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="70dp"
+        app:layout_constraintTop_toBottomOf="@id/vg_Distancetop"
+        app:layout_constraintBottom_toTopOf="@id/distance_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/tv_distanceTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Route distance"
+            android:orientation="horizontal"
+            android:layout_marginStart="26dp"
+            android:layout_marginEnd="26dp"
+            android:layout_marginBottom="10sp"
+            android:textColor="@color/whitecontrast"
+            android:textSize="42sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tv_distanceSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter the distance to destination in km"
+            android:orientation="horizontal"
+            android:layout_marginStart="26dp"
+            android:layout_marginEnd="26dp"
+            android:textSize="20sp"
+            android:textColor="@color/whitecontrast"
+            />
+
+        <TextView
+            android:id="@+id/Step3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Step 3 of 3"
+            android:orientation="horizontal"
+            android:layout_marginStart="26dp"
+            android:layout_marginEnd="26dp"
+            android:textSize="14sp"
+            android:textColor="@color/subtext"
+            />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/InputDistance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hintEnabled="false"
+            android:layout_marginStart="26dp"
+            android:layout_marginEnd="26dp"
+            android:layout_marginTop="30dp"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_Distance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_it"
+                android:hint="e.g., 120 km"
+                android:inputType="numberDecimal"
+                android:textColor="@color/whitecontrast"
+                android:textColorHint="@color/subtext"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/distance_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Continue"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:textColor="@color/whitecontrast"
+        android:layout_marginEnd="36dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginBottom="45dp"
+        android:backgroundTint="@color/secondary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

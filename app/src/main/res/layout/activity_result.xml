@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main"
+    tools:context=".ResultActivity">
+
+
+    <LinearLayout
+        android:id="@+id/topbarResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/resultbar_bg"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+
+
+        <TextView
+            android:id="@+id/titleresult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textColor="@color/whitecontrast"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_marginTop="160dp"
+            android:layout_marginStart="52dp"
+            android:layout_marginEnd="52dp"
+            android:text="Your estimated fuel cost is:"/>
+
+        <TextView
+            android:id="@+id/tv_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textColor="@color/whitecontrast"
+            android:textSize="75dp"
+            tools:text="80.2"
+            android:textStyle="bold"
+            android:layout_marginStart="52dp"
+            android:layout_marginEnd="52dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            />
+
+
+    </LinearLayout>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottie_consumption"
+        android:layout_width="138dp"
+        android:layout_height="138dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="Results.json"
+        app:lottie_loop="false" />
+
+    <LinearLayout
+        android:id="@+id/resultData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topbarResult"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btn_result"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/subtext"
+            android:textAlignment="center"
+            android:textSize="15sp"
+            android:layout_marginBottom="56dp"
+            android:text="Review entered data"
+            />
+
+        <LinearLayout
+            android:id="@+id/vg_fuelPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginHorizontal="46sp"
+            android:layout_marginBottom="30dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="start"
+                android:textColor="@color/whitecontrast"
+                android:textSize="19sp"
+                android:text="Fuel Price"
+                />
+
+            <TextView
+                android:id="@+id/tv_fuelPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/whitecontrast"
+                android:textSize="19sp"
+                tools:text="1.85"
+                android:layout_gravity="end"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/vg_consumption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="30dp"
+            android:layout_marginHorizontal="46sp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/whitecontrast"
+                android:textSize="19sp"
+                android:text="Consumption"
+                />
+
+            <TextView
+                android:id="@+id/tv_consumption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/whitecontrast"
+                android:textSize="19sp"
+                tools:text="8.5"
+                android:layout_gravity="end"
+                />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/vg_distance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginHorizontal="46sp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/whitecontrast"
+                android:textSize="19sp"
+                android:text="Distance Km"
+                />
+
+            <TextView
+                android:id="@+id/tv_distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/whitecontrast"
+                android:textSize="19sp"
+                tools:text="180.0"
+                android:layout_gravity="end"
+                />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/subtext"
+            android:textAlignment="center"
+            android:textSize="15sp"
+            android:layout_marginTop="56dp"
+            android:layout_marginStart="36dp"
+            android:layout_marginEnd="36dp"
+            android:text="Have a great trip! I'll always be here to help you calculate your fuel costs whenever you need."
+            />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="New Calculate"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:textColor="@color/whitecontrast"
+        android:layout_marginEnd="36dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginBottom="45dp"
+        android:backgroundTint="@color/secondary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,6 +3,7 @@
     <style name="Base.Theme.FuelCostCalculator" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="android:statusBarColor">#FFB605</item>
     </style>
 
     <style name="Theme.FuelCostCalculator" parent="Base.Theme.FuelCostCalculator" />
